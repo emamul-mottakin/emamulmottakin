@@ -1,0 +1,56 @@
+.about-me-overlay{
+    background-image:linear-gradient(to left, $primary-color,$secondary-color);
+    height:500px;
+}
+.about-me-section{
+    background-color:$dark-color;
+    padding:45px 0px;
+    border-top-right-radius:100px;
+    margin-top:-450px;
+    transition:1s;
+    .about-me-title{
+        text-align:center;
+        padding: 30px 0px;
+        color: $secondary-color;
+        font-size:40px;
+    }
+    .about-me-gread{
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        grid-gap: 40px;
+        grid-template-rows: 1fr;
+        .about-me-image{
+            align-self:center;
+            margin-top:5px;
+            padding: 0px 20px 20px 10px;
+            border-bottom:2px solid $green-color;
+            box-shadow: -1px 19px 23px -28px #4CAF50;
+            border-radius:5px;
+            height:300px;
+            max-width:520px;
+            img{
+                width:100%;
+                transition:0.5s;
+                border-radius:25px;
+                border-top-right-radius:5px;
+                height:100%;
+            }
+            img:hover{
+                transform:scale(1.02);
+            }
+        }
+        .about-me-content{
+            color:$light-color;
+            p{
+                padding:30px 0px;
+            }
+            ul li{
+                color:$p-color;
+                font-family:$p-text;
+                list-style-position:inside;
+                display:list-item;
+                list-style-image:url( ../img/right.png);
+            }
+        }
+    }
+}

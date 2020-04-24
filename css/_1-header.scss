@@ -1,0 +1,55 @@
+/*header-section-start*/
+header{
+    background-image: url("../img/showcase.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    .header-overlay{
+        background-color: rgba(0, 0, 0, 0.678);
+        height:500px;
+    }
+    .header-grid{
+        display:grid;
+        grid-template-columns:minmax(270px,1fr);
+        grid-template-rows: 350px 150px;
+        height:500px;
+        .header-content{
+            justify-self: center;
+            align-self: center;
+            border:5px solid $light-color;
+            padding:30px 30px;
+            text-align:center;
+            h1{
+                color:$light-color;
+                text-transform:uppercase;
+                font-size:25px;
+                font-family:$h-text;
+            }
+            p{
+                color: $light-color;
+                margin-top: 15px;
+                font-family:$p-text;
+                font-size:20px;
+            }
+        }
+        .header-btns{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(200px, 250px));
+            justify-content:center;
+            place-items:start center;
+            a{
+                color:$light-color;
+                padding:15px 20px;
+                background-image:linear-gradient(to right, $primary-color,$secondary-color);
+                text-decoration:none;
+                border-radius: 5px;
+            }
+            a:hover{
+                background-image:linear-gradient(to right,$secondary-color,$primary-color);
+            }
+            
+        }
+    }
+}
+/*header-section-end*/

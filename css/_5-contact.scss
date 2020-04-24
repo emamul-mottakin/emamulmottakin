@@ -1,0 +1,44 @@
+label{
+    font-family:$p-text;
+    color:$p-color;
+}
+.contact-section{
+    background:$dark-color;
+    padding:5rem 0rem;
+    .contact-title{
+        color:$secondary-color;
+        text-align:center;
+        margin-bottom:3rem;
+    }
+    .contact-grid{
+        display:grid;
+        grid-gap:50px;
+        .location,.phone,.email{
+            text-align:center;
+            i{
+                color:$secondary-color;
+                margin:1rem 0px;
+            }
+        }
+    }
+    form{
+        padding:5rem 0px;
+        h2{
+            color:$secondary-color;
+            margin-bottom:3rem;
+            font-size:25px;
+        }
+        #contact-btn{
+            color:$light-color;
+            padding:15px 20px;
+            background-image:linear-gradient(to right,$primary-color,$secondary-color);
+            border-radius: 25px;
+            width:150px;
+            margin:2rem 0rem;
+            border:none;
+        }
+        #contact-btn:hover{
+            background-image:linear-gradient(to right, $secondary-color,$primary-color);
+        }
+    }
+}

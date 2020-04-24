@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700|Sriracha&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/498886e2d4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--nav-bar-->
+    <nav>
+        <div class="container">
+            <input type="checkbox" id="chk">
+            <label for="chk" class="show-menu-icon">
+                <i class="fas fa-ellipsis-h"></i>
+            </label>
+            <a href="index.html"><h1>EM Arko</h1></a>
+            <ul>
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact</a>
+                <label for="chk" class="hide-menu-icon">
+                    <i class="fas fa-times"></i>
+                </label>
+            </ul>
+        </div>
+    </nav>
+    <!--nav-bar-->
+
+    <!--contact-section-->
+    <div class="contact-section">
+        <div class="container">
+            <h1 class="contact-title">Contact Me</h1>
+            <div class="contact-grid">
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Dewanpara,Vasantek,Mirpur-14,Dhaka,Bangladesh</p>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <p>+88001648949926</p>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <p>emarko3236@gmail.com</p>
+                </div>
+            </div>
+            <form method="POST">
+                <h2>Contact Form</h2>
+                <div class="first-name">
+                    <label for="first-name">First-name</label>
+                    <input type="text" id="first-name" placeholder="First-name">
+                </div>
+
+                <div class="last-name">
+                    <label for="last-name">Last-name</label>
+                    <input type="text" id="last-name" placeholder="Last-name">
+                </div>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="enter your email">
+                <br>
+                <label for="sub">Subject</label>
+                <input type="text" id="sub">
+                <br>
+                <label for="massage">Massage</label>
+                <textarea id="massage" rows="10" placeholder="Write your notes or qustions here..."></textarea>
+                <br>
+                <input type="submit" value="Send Massage" id="contact-btn">
+            </form>
+        </div>
+    </div>
+    <!--contact-section-end-->
+
+    <!--footer-start-->
+    <footer id="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="f-about">
+                        <h3>About Me</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, inventore! Placeat in repellendus recusandae itaque.</p>
+                    </div>
+                    <div class="f-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="index.html">Service</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="f-follow">
+                        <h3>Follow Us</h3>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div class="f-sub">
+                        <h3>Subscribe Newsletter</h3>
+                        <input type="text" placeholder="Enter email">
+                        <a href="#">Send</a>
+                    </div>
+                </div>
+                <div class="f-copyright">
+                    <h3>copyright © EM Arko 2020</h3>
+                    <p>Design by: <a href="https://www.facebook.com/arko.emarko" target="_blank">EM Arko</a></p>
+                </div>
+            </div>
+    </footer>
+    <!--footer-end-->
+</body>
+</html>
