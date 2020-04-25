@@ -23,19 +23,6 @@
 }
 /*main-section-end*/
 
-/*service-section*/
-@media (max-width:1200px){
-    .service-grid{
-        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
-    }
-}
-@media (min-width:1201px){
-    .service-grid{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-/*service-section-end*/
-
 /*contact-section-start*/
 @media(max-width:768px){
     .contact-grid{

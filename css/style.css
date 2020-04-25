@@ -451,13 +451,32 @@ header .header-grid .header-btns a:hover {
   display: -ms-grid;
   display: grid;
   grid-gap: 40px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (min-content)[6];
+      grid-template-rows: repeat(6, -webkit-min-content);
+      grid-template-rows: repeat(6, min-content);
 }
 
-#service-section .service-block {
+@media screen and (min-width: 768px) {
+  #service-section .service-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #service-section .service-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+#service-section .service-grid .service-block {
   text-align: center;
 }
 
-#service-section .service-block .block-icon {
+#service-section .service-grid .service-block .block-icon {
   width: 150px;
   height: 150px;
   text-align: center;
@@ -468,48 +487,46 @@ header .header-grid .header-btns a:hover {
   margin: 3rem auto;
 }
 
-#service-section .service-block .block-icon i {
+#service-section .service-grid .service-block .block-icon i {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
-#service-section .service-block .block-icon-1 {
+#service-section .service-grid .service-block .block-icon {
+  color: #dadada;
+}
+
+#service-section .service-grid .service-block .block-icon-1 {
   background: rgba(244, 67, 54, 0.089);
   border: 2px solid #F44336;
-  color: #dadada;
 }
 
-#service-section .service-block .block-icon-2 {
+#service-section .service-grid .service-block .block-icon-2 {
   background: rgba(229, 47, 111, 0.096);
   border: 2px solid #E52F70;
-  color: #dadada;
 }
 
-#service-section .service-block .block-icon-3 {
+#service-section .service-grid .service-block .block-icon-3 {
   background: rgba(254, 136, 2, 0.096);
   border: 2px solid #FE8802;
-  color: #dadada;
 }
 
-#service-section .service-block .block-icon-4 {
+#service-section .service-grid .service-block .block-icon-4 {
   background: rgba(155, 39, 176, 0.103);
   border: 2px solid #9C27B0;
-  color: #dadada;
 }
 
-#service-section .service-block .block-icon-5 {
+#service-section .service-grid .service-block .block-icon-5 {
   background: rgba(3, 168, 244, 0.11);
   border: 2px solid #03A9F4;
-  color: #dadada;
 }
 
-#service-section .service-block .block-icon-6 {
+#service-section .service-grid .service-block .block-icon-6 {
   background: rgba(76, 175, 79, 0.116);
   border: 2px solid #4CAF50;
-  color: #dadada;
 }
 
-#service-section .service-block .block-content h3 {
+#service-section .service-grid .service-block .block-content h3 {
   color: #dadada;
   margin: 20px 0px;
   font-size: 25px;
@@ -700,22 +717,6 @@ label {
 }
 
 /*main-section-end*/
-/*service-section*/
-@media (max-width: 1200px) {
-  .service-grid {
-    -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media (min-width: 1201px) {
-  .service-grid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/*service-section-end*/
 /*contact-section-start*/
 @media (max-width: 768px) {
   .contact-grid {
