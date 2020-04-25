@@ -19,8 +19,11 @@
     }
     .features-grid{
         display:grid;
-        grid-template-columns: repeat( auto-fit, minmax(250px,1fr));
-        grid-gap:40px;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(2,min-content);
+        // @import leptop(){
+        //     grid-template-columns:1fr 1fr;
+        // }
         .features-contents{
             p:nth-child(2){
                 padding:20px 0px;
