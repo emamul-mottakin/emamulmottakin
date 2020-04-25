@@ -14,29 +14,35 @@
         color: $secondary-color;
         font-size:40px;
     }
-    .about-me-gread{
+    .about-me-grid{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        grid-template-columns:1fr;
         grid-gap: 40px;
-        grid-template-rows: 1fr;
+        grid-template-rows:repeat(2,min-content);
+        @include leptop(){
+            grid-template-columns:1fr 1fr;
+        }
         .about-me-image{
-            align-self:center;
-            margin-top:5px;
-            padding: 0px 20px 20px 10px;
-            border-bottom:2px solid $green-color;
-            box-shadow: -1px 19px 23px -28px #4CAF50;
-            border-radius:5px;
-            height:300px;
-            max-width:520px;
+            position: relative;
+            &::after{
+                content:"";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width:100%;
+                height:100%;
+                border-bottom:2px solid $green-color;
+                box-shadow: -1px 19px 23px -28px #4CAF50;
+                border-radius:5px;
+            }
             img{
                 width:100%;
                 transition:0.5s;
                 border-radius:25px;
                 border-top-right-radius:5px;
-                height:100%;
-            }
-            img:hover{
-                transform:scale(1.02);
+                &:hover{
+                    transform:scale(1.03);
+                }
             }
         }
         .about-me-content{
@@ -45,10 +51,9 @@
                 padding:30px 0px;
             }
             ul li{
-                color:$p-color;
-                font-family:$p-text;
+                @include lead();
+                font-size:15px;
                 list-style-position:inside;
-                display:list-item;
                 list-style-image:url( ../img/right.png);
             }
         }

@@ -1,0 +1,18 @@
+.container{
+    margin:auto;
+    @include xsm-to-phone(){
+        width:95%;
+    }
+    @include phone(){
+        width: 540px;
+    }
+    @include tablet(){
+        width: 720px;
+    }
+    @include leptop{
+        width: 960px;
+    }
+    @include desktop(){
+        width: 1140px;
+    }
+}

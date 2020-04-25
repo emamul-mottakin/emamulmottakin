@@ -11,20 +11,25 @@ header{
     }
     .header-grid{
         display:grid;
-        grid-template-columns:minmax(270px,1fr);
+        grid-template-columns:1fr;
         grid-template-rows: 350px 150px;
-        height:500px;
         .header-content{
             justify-self: center;
             align-self: center;
             border:5px solid $light-color;
             padding:30px 30px;
             text-align:center;
+            @include xsm-to-phone(){
+                padding:30px 30px;
+            }
             h1{
                 color:$light-color;
                 text-transform:uppercase;
                 font-size:25px;
                 font-family:$h-text;
+                @include phone(){
+                    font-size:50px;
+                }
             }
             p{
                 color: $light-color;
