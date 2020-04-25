@@ -10,9 +10,36 @@ $skyblue-color:#03A9F4;
 $green-color:#4CAF50;
 $p-text:'Montserrat', sans-serif,;
 $h-text:'Sriracha', cursive;
-// @mixin  {
-    
-// }
+@mixin xsm-to-phone() {
+    @media screen and (max-width:575px){
+        @content;
+    }
+}
+@mixin xsm-to-tablet(){
+    @media screen and (max-width:767px){
+        @content;
+    }
+}
+@mixin phone() {
+    @media screen and (min-width:576px){
+        @content;
+    }
+}
+@mixin tablet() {
+    @media screen and (min-width:768px){
+        @content;
+    }
+}
+@mixin leptop() {
+    @media screen and (min-width:992px){
+        @content;
+    }
+}
+@mixin desktop() {
+    @media screen and (min-width:1200px){
+        @content;
+    }
+}
 *{
     margin:0;
     padding:0;
@@ -20,10 +47,6 @@ $h-text:'Sriracha', cursive;
 }
 html{
     scroll-behavior:smooth;
-}
-.container{
-    width:85%;
-    margin:auto;
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
