@@ -23,19 +23,6 @@
 }
 /*main-section-end*/
 
-/*features-section-start*/
-@media (min-width: 576px){
-    .service-grid{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media (min-width: 1170px){
-    .service-grid{
-         grid-template-columns:repeat(3, 1fr);
-    }
-}
-/*features-section-end*/
-
 /*service-section*/
 @media (max-width:1200px){
     .service-grid{

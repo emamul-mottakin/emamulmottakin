@@ -5,6 +5,12 @@
     position:relative;
     border-bottom-left-radius:100px;
     transition:1s;
+    @include tablet(){
+        padding-bottom:8rem;
+    }
+    @include leptop(){
+        padding-bottom:5rem;
+    }
     .features-title{
         h1{
             text-align:center;
@@ -21,25 +27,23 @@
         display:grid;
         grid-template-columns:1fr;
         grid-template-rows: repeat(2,min-content);
-        // @import leptop(){
-        //     grid-template-columns:1fr 1fr;
-        // }
+        grid-gap:40px;
+        @include leptop(){
+            grid-template-columns: 1fr 1fr;
+        }
         .features-contents{
             p:nth-child(2){
                 padding:20px 0px;
             }
         }
         .features-image{
-            height:300px;
-            padding: 0px 20px 20px 10px;
+            border-bottom:3px solid #0C0BAE;
+            box-shadow: -1px 19px 23px -28px #0C0BAE;
             border-radius:5px;
-            border-bottom:2px solid #0312DF;
-            box-shadow: 0px 12px 8px -11px #0312DF;
-            max-width:520px;
-            justify-self:center;
             img{
-                height:100%;
+                width:100%;
                 transition:1s;
+                border-radius:5px;
             }
             img:hover{
                 transform:scale(1.03);

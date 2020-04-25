@@ -351,6 +351,18 @@ header .header-grid .header-btns a:hover {
   transition: 1s;
 }
 
+@media screen and (min-width: 768px) {
+  .features-section {
+    padding-bottom: 8rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .features-section {
+    padding-bottom: 5rem;
+  }
+}
+
 .features-section .features-title h1 {
   text-align: center;
   color: #FE8802;
@@ -371,6 +383,14 @@ header .header-grid .header-btns a:hover {
   -ms-grid-rows: (min-content)[2];
       grid-template-rows: repeat(2, -webkit-min-content);
       grid-template-rows: repeat(2, min-content);
+  grid-gap: 40px;
+}
+
+@media screen and (min-width: 992px) {
+  .features-section .features-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
 }
 
 .features-section .features-grid .features-contents p:nth-child(2) {
@@ -378,21 +398,17 @@ header .header-grid .header-btns a:hover {
 }
 
 .features-section .features-grid .features-image {
-  height: 300px;
-  padding: 0px 20px 20px 10px;
+  border-bottom: 3px solid #0C0BAE;
+  -webkit-box-shadow: -1px 19px 23px -28px #0C0BAE;
+          box-shadow: -1px 19px 23px -28px #0C0BAE;
   border-radius: 5px;
-  border-bottom: 2px solid #0312DF;
-  -webkit-box-shadow: 0px 12px 8px -11px #0312DF;
-          box-shadow: 0px 12px 8px -11px #0312DF;
-  max-width: 520px;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
 .features-section .features-grid .features-image img {
-  height: 100%;
+  width: 100%;
   -webkit-transition: 1s;
   transition: 1s;
+  border-radius: 5px;
 }
 
 .features-section .features-grid .features-image img:hover {
@@ -684,22 +700,6 @@ label {
 }
 
 /*main-section-end*/
-/*features-section-start*/
-@media (min-width: 576px) {
-  .service-grid {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1170px) {
-  .service-grid {
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/*features-section-end*/
 /*service-section*/
 @media (max-width: 1200px) {
   .service-grid {
