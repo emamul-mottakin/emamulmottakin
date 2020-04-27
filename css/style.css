@@ -69,12 +69,6 @@ nav {
   z-index: 2;
 }
 
-@media screen and (max-width: 767px) {
-  nav {
-    position: static;
-  }
-}
-
 nav #chk {
   display: none;
 }
@@ -99,7 +93,7 @@ nav .show-menu-icon, nav .hide-menu-icon {
     color: #dadada;
     float: right;
     display: block;
-    line-height: 50px;
+    line-height: 80px;
     font-size: 25px;
   }
 }
@@ -121,6 +115,7 @@ nav ul {
   nav ul {
     position: fixed;
     background-color: #535C68;
+    top: 0;
     width: 100%;
     right: -100%;
     display: -webkit-box;
@@ -139,6 +134,7 @@ nav ul {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#E52F70), to(#FE8802));
     background-image: linear-gradient(#E52F70, #FE8802);
     overflow: scroll;
+    z-index: 5;
   }
 }
 
@@ -295,16 +291,6 @@ header .header-grid .header-btns a:hover {
 }
 
 .about-me-section .about-me-grid .about-me-image {
-  position: relative;
-}
-
-.about-me-section .about-me-grid .about-me-image::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   border-bottom: 2px solid #4CAF50;
   -webkit-box-shadow: -1px 19px 23px -28px #4CAF50;
           box-shadow: -1px 19px 23px -28px #4CAF50;
@@ -537,43 +523,137 @@ label {
   color: rgba(187, 187, 187, 0.753);
 }
 
-.contact-section {
+#contact-section {
   background: #151D2A;
   padding: 5rem 0rem;
 }
 
-.contact-section .contact-title {
+#contact-section .contact-title {
   color: #FE8802;
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.contact-section .contact-grid {
+#contact-section .contact-grid {
   display: -ms-grid;
   display: grid;
   grid-gap: 50px;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (min-content)[3];
+      grid-template-rows: repeat(3, -webkit-min-content);
+      grid-template-rows: repeat(3, min-content);
 }
 
-.contact-section .contact-grid .location, .contact-section .contact-grid .phone, .contact-section .contact-grid .email {
+@media screen and (min-width: 768px) {
+  #contact-section .contact-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+#contact-section .contact-grid .location, #contact-section .contact-grid .phone, #contact-section .contact-grid .email {
   text-align: center;
 }
 
-.contact-section .contact-grid .location i, .contact-section .contact-grid .phone i, .contact-section .contact-grid .email i {
+#contact-section .contact-grid .location span, #contact-section .contact-grid .phone span, #contact-section .contact-grid .email span {
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(187, 187, 187, 0.753);
+  font-size: 15px;
+}
+
+#contact-section .contact-grid .location i, #contact-section .contact-grid .phone i, #contact-section .contact-grid .email i {
   color: #FE8802;
   margin: 1rem 0px;
+  display: block;
 }
 
-.contact-section form {
-  padding: 5rem 0px;
-}
-
-.contact-section form h2 {
+#contact-section h2 {
   color: #FE8802;
-  margin-bottom: 3rem;
+  margin: 3rem;
   font-size: 25px;
+  text-align: center;
 }
 
-.contact-section form #contact-btn {
+#contact-section form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (min-content)[7];
+      grid-template-rows: repeat(7, -webkit-min-content);
+      grid-template-rows: repeat(7, min-content);
+  grid-gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section form {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (min-content)[6];
+        grid-template-rows: repeat(6, -webkit-min-content);
+        grid-template-rows: repeat(6, min-content);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section form .first-name {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section form .last-name {
+    grid-column: 2/-1;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section form .email {
+    grid-column: 1/-1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section form .subject {
+    grid-column: 1/-1;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #contact-section form .massage {
+    grid-column: 1/-1;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+}
+
+#contact-section form input, #contact-section form textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem .5rem;
+  border-radius: 30px;
+  border: 1px solid #FE8802;
+  outline: none;
+}
+
+#contact-section form #contact-btn {
   color: #dadada;
   padding: 15px 20px;
   background-image: -webkit-gradient(linear, left top, right top, from(#E52F70), to(#FE8802));
@@ -584,7 +664,7 @@ label {
   border: none;
 }
 
-.contact-section form #contact-btn:hover {
+#contact-section form #contact-btn:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#FE8802), to(#E52F70));
   background-image: linear-gradient(to right, #FE8802, #E52F70);
 }
@@ -718,49 +798,6 @@ label {
 
 /*main-section-end*/
 /*contact-section-start*/
-@media (max-width: 768px) {
-  .contact-grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  label {
-    display: block;
-    margin: 1rem 0px;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 1rem 10px;
-    outline: none;
-    border-radius: 25px;
-    border: 1px solid #FE8802;
-  }
-}
-
-@media (min-width: 769px) {
-  .contact-grid {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-  }
-  label {
-    display: block;
-    margin: 1rem 0px;
-  }
-  input, textarea {
-    width: 100%;
-    padding: 1rem 10px;
-    outline: none;
-    border-radius: 25px;
-    border: 1px solid #FE8802;
-  }
-  .first-name, .last-name {
-    width: 47%;
-    display: inline-block;
-  }
-  .first-name {
-    margin-right: 5%;
-  }
-}
-
 /*contact-section-end*/
 /*footer-start*/
 @media (max-width: 768px) {

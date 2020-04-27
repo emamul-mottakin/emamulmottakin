@@ -23,18 +23,9 @@
             grid-template-columns:1fr 1fr;
         }
         .about-me-image{
-            position: relative;
-            &::after{
-                content:"";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width:100%;
-                height:100%;
-                border-bottom:2px solid $green-color;
+            border-bottom:2px solid $green-color;
                 box-shadow: -1px 19px 23px -28px #4CAF50;
                 border-radius:5px;
-            }
             img{
                 width:100%;
                 transition:0.5s;

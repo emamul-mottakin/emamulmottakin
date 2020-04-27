@@ -2,7 +2,7 @@ label{
     font-family:$p-text;
     color:$p-color;
 }
-.contact-section{
+#contact-section{
     background:$dark-color;
     padding:5rem 0rem;
     .contact-title{
@@ -13,20 +13,76 @@ label{
     .contact-grid{
         display:grid;
         grid-gap:50px;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(3,min-content);
+        @include tablet(){
+            grid-template-columns:1fr 1fr 1fr;
+        }
         .location,.phone,.email{
             text-align:center;
+            span{
+                @include lead();
+                font-size:15px;
+            }
             i{
                 color:$secondary-color;
                 margin:1rem 0px;
+                display:block;
             }
         }
     }
+    h2{
+        color:$secondary-color;
+        margin:3rem;
+        font-size:25px;
+        text-align:center;
+    }
     form{
-        padding:5rem 0px;
-        h2{
-            color:$secondary-color;
-            margin-bottom:3rem;
-            font-size:25px;
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(7,min-content);
+        grid-gap:20px;
+        @include tablet(){
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: repeat(6,min-content);
+        }
+        .first-name{
+            @include tablet(){
+                grid-column:1/2;
+                grid-row:1/2;
+            }
+        }
+        .last-name{
+            @include tablet(){
+                grid-column:2/-1;
+                grid-row:1/2;
+            }
+        }
+        .email{
+            @include tablet(){
+                grid-column:1/-1;
+                grid-row:2/3;
+            }
+        }
+        .subject{
+            @include tablet(){
+                grid-column:1/-1;
+                grid-row:3/4;
+            }
+        }
+        .massage{
+            @include tablet(){
+                grid-column:1/-1;
+                grid-row:4/5;
+            }
+        }
+        input,textarea{
+            display:block;
+            width:100%;
+            padding:1rem .5rem;
+            border-radius:30px;
+            border:1px solid $secondary-color;
+            outline:none;
         }
         #contact-btn{
             color:$light-color;

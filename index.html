@@ -23,7 +23,7 @@
                 <a href="#">Home</a>
                 <a href="#about">About</a>
                 <a href="#service-section">Service</a>
-                <a href="contact.html">Contact</a>
+                <a href="#contact-section">Contact</a>
                 <label for="chk" class="hide-menu-icon">
                     <i class="fas fa-times"></i>
                 </label>
@@ -178,25 +178,25 @@
     <!-- service-section-end -->
 
     <!--contact-section-->
-    <section class="contact-section">
+    <section id="contact-section">
         <div class="container">
             <h1 class="contact-title">Contact Me</h1>
             <div class="contact-grid">
                 <div class="location">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>Dewanpara,Vasantek,Mirpur-14,Dhaka,Bangladesh</p>
+                    <span>Dewanpara,Vasantek,<br>Mirpur-14,Dhaka,Bangladesh</span>
                 </div>
                 <div class="phone">
                     <i class="fas fa-phone"></i>
-                    <p>+88001648949926</p>
+                    <span>+88001648949926</span>
                 </div>
                 <div class="email">
                     <i class="fas fa-envelope"></i>
-                    <p>emarko3236@gmail.com</p>
+                    <span>emarko3236@gmail.com</span>
                 </div>
             </div>
+            <h2>Contact Form</h2>
             <form method="POST">
-                <h2>Contact Form</h2>
                 <div class="first-name">
                     <label for="first-name">First-name</label>
                     <input type="text" id="first-name" placeholder="First-name">
@@ -206,16 +206,21 @@
                     <label for="last-name">Last-name</label>
                     <input type="text" id="last-name" placeholder="Last-name">
                 </div>
-                <br>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="enter your email">
-                <br>
-                <label for="sub">Subject</label>
-                <input type="text" id="sub">
-                <br>
-                <label for="massage">Massage</label>
-                <textarea id="massage" rows="10" placeholder="Write your notes or qustions here..."></textarea>
-                <br>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="enter your email">
+                </div>
+
+                <div class="subject">
+                    <label for="sub">Subject</label>
+                    <input type="text" id="sub">
+                </div>
+
+                <div class="massage">
+                    <label for="massage">Massage</label>
+                    <textarea id="massage" rows="10" placeholder="Write your notes or qustions here..."></textarea>
+                </div>
+
                 <input type="submit" value="Send Massage" id="contact-btn">
             </form>
         </div>

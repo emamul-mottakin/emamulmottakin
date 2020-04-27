@@ -6,9 +6,9 @@ nav{
     position:sticky;
     top:0;
     z-index:2;
-    @include xsm-to-tablet(){
-        position:static;
-    }
+    // @include xsm-to-tablet(){
+    //     position:static;
+    // }
     #chk{
         display:none;
     }
@@ -27,7 +27,7 @@ nav{
             color:$light-color;
             float:right;
             display:block;
-            line-height:50px;
+            line-height:80px;
             font-size:25px;
         }
     }
@@ -44,6 +44,7 @@ nav{
         @include xsm-to-tablet(){
             position:fixed;
             background-color:#535C68;
+            top:0;
             width:100%;
             right:-100%;
             display:flex;
@@ -55,6 +56,7 @@ nav{
             border-radius:100% 0px 30% 500%;
             background-image:linear-gradient($primary-color,$secondary-color);
             overflow:scroll;
+            z-index:5;
         }
         a{
             text-decoration:none;
