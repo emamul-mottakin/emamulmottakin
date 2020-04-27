@@ -673,13 +673,37 @@ label {
 #footer {
   background: #100E17;
   padding: 5rem 0px;
-  grid-gap: 20px;
 }
 
 #footer .footer-grid {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (min-content)[4];
+      grid-template-rows: repeat(4, -webkit-min-content);
+      grid-template-rows: repeat(4, min-content);
   grid-gap: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  #footer .footer-grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: (min-content)[2];
+        grid-template-rows: repeat(2, -webkit-min-content);
+        grid-template-rows: repeat(2, min-content);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #footer .footer-grid {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: min-content;
+        grid-template-rows: -webkit-min-content;
+        grid-template-rows: min-content;
+  }
 }
 
 #footer .footer-grid h3 {
@@ -696,12 +720,7 @@ label {
 }
 
 #footer .footer-grid .f-follow, #footer .footer-grid .f-about, #footer .footer-grid .f-links, #footer .footer-grid .f-sub {
-  margin: 5px 0px 0px 0px;
   font-size: 14px;
-}
-
-#footer .footer-grid .f-follow h3, #footer .footer-grid .f-about h3, #footer .footer-grid .f-links h3, #footer .footer-grid .f-sub h3 {
-  margin-bottom: 1.6rem;
 }
 
 #footer .footer-grid .f-links ul li a {
@@ -726,27 +745,34 @@ label {
   color: #dadada;
 }
 
-#footer .footer-grid .f-sub input {
+#footer .footer-grid .f-sub .subscribe {
+  position: relative;
+  background: red;
+}
+
+#footer .footer-grid .f-sub .subscribe input {
   padding: 13px;
   border: 1px solid #dadada;
   outline: none;
-  border-radius: 15px 0px 0px 15px;
+  border-radius: 15px;
   font-size: 17px;
   background: none;
   float: left;
-  width: 65%;
+  width: 100%;
+  color: #dadada;
 }
 
-#footer .footer-grid .f-sub a {
-  background: #dadada;
-  color: #100E17;
-  font-size: 17px;
-  float: left;
-  padding: 14px;
+#footer .footer-grid .f-sub .subscribe a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  background-color: #fff;
+  width: 20%;
   border-radius: 0px 15px 15px 0px;
-  font-family: "Montserrat", sans-serif;
-  width: 25%;
+  line-height: 48px;
   text-align: center;
+  color: #100E17;
 }
 
 #footer .f-copyright {
@@ -797,22 +823,4 @@ label {
 }
 
 /*main-section-end*/
-/*contact-section-start*/
-/*contact-section-end*/
-/*footer-start*/
-@media (max-width: 768px) {
-  .footer-grid {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 769px) {
-  .footer-grid {
-    -ms-grid-columns: 35% (minmax(200px, 1fr))[auto-fit];
-        grid-template-columns: 35% repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-/*footer-end*/
 /*# sourceMappingURL=style.css.map */

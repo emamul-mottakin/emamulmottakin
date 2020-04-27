@@ -2,10 +2,19 @@
 #footer{
     background:$dark-color-2;
     padding:5rem 0px;
-    grid-gap:20px;
     .footer-grid{
         display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows: repeat(4,min-content);
         grid-gap:30px;
+        @include tablet(){
+            grid-template-columns:1fr 1fr;
+            grid-template-rows: repeat(2,min-content);
+        }
+        @include leptop(){
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            grid-template-rows:min-content;
+        }
         h3{
             color:$light-color;
             margin:10px 0px;
@@ -17,11 +26,7 @@
             list-style:none;
         }
         .f-follow,.f-about,.f-links,.f-sub{
-            margin:5px 0px 0px 0px;
             font-size:14px;
-            h3{
-                margin-bottom:1.6rem;
-            }
         }
         .f-links ul li a{
             line-height:25px;
@@ -42,26 +47,32 @@
             color: $light-color;
         }
         .f-sub{
-            input{
-                padding:13px;
-                border:1px solid $light-color;
-                outline:none;
-                border-radius:15px 0px 0px 15px;
-                font-size:17px;
-                background:none;
-                float:left;
-                width:65%;
-            }
-            a{
-                background:$light-color;
-                color:$dark-color-2;
-                font-size:17px;
-                float:left;
-                padding:14px;
-                border-radius:0px 15px 15px 0px;
-                font-family:$p-text;
-                width:25%;
-                text-align:center;
+            .subscribe{
+                position: relative;
+                background: red;
+                input{
+                    padding:13px;
+                    border:1px solid $light-color;
+                    outline:none;
+                    border-radius:15px;
+                    font-size:17px;
+                    background:none;
+                    float:left;
+                    width:100%;
+                    color:$light-color;
+                }
+                a{
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    display:inline-block;
+                    background-color: #fff;
+                    width:20%;
+                    border-radius:0px 15px 15px 0px;
+                    line-height:48px;
+                    text-align:center;
+                    color:$dark-color-2;
+                }
             }
         }
     }
