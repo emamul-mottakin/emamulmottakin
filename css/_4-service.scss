@@ -1,80 +1,151 @@
 //*service-section-start*//
-#service-section{
+#service-section {
+
     background-image: url(../img/service.jpg);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     margin-top:70px;
-    .service-overlay{
+
+    .service-overlay {
+
         background-color:rgba(21, 29, 42, 0.911);
         padding:5rem 0px;
+
     }
-    .service-title{
-        h1{
+    
+    .service-title {
+
+        h1 {
+
             text-align:center;
             color:$secondary-color;
             font-size:40px;
             padding: 30px 0px;
+
         }
+
     }
-    .service-grid{
+
+    .service-grid {
+
         display:grid;
         grid-gap:40px;
         grid-template-columns:1fr;
         grid-template-rows: repeat(6,min-content);
-        @include tablet(){
+
+        @include tablet() {
+
             grid-template-columns:1fr 1fr;
+
         }
-        @include leptop(){
+
+        @include leptop() {
+
             grid-template-columns:1fr 1fr 1fr;
+
         }
-        .service-block{
+
+        .service-block {
+
             text-align:center;
-            .block-icon{
+            transition:all .5s;
+            border-radius: 1rem;
+            cursor: pointer;
+
+            &:hover {
+
+                transform:scale(1.01);
+
+                .block-icon {
+
+                    transform: rotate(-45deg);
+
+                    i {
+
+                        transform: rotate(45deg);
+    
+                    }
+                }
+
+            }
+
+            .block-icon {
+
                 width:150px;
                 height:150px;
                 text-align:center;
                 line-height:150px;
                 font-size:60px;
-                transform: rotate(45deg);
+                color:$light-color;
                 margin:3rem auto;
-                i{
+                border-radius: 10px;
+
+                position: relative;
+                transform: rotate(45deg);
+                transition: all .3s;
+
+                i {
+
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 40px;
+                    margin: auto;
                     transform: rotate(-45deg);
+                    transition: all .3s;
+
                 }
             }
-            .block-icon{
-                color:$light-color;
-            }
-            .block-icon-1{
+
+            .block-icon-1 {
+
                 background:rgba(244, 67, 54, 0.089);
                 border:2px solid $orange-color;
+
             }
-            .block-icon-2{
+
+            .block-icon-2 {
+
                 background:rgba(229, 47, 111, 0.096);
                 border:2px solid $primary-color;
+
             }
-            .block-icon-3{
+
+            .block-icon-3 {
+
                 background:rgba(254, 136, 2, 0.096);
                 border:2px solid $secondary-color;
+
             }
-            .block-icon-4{
+            .block-icon-4 {
+
                 background:rgba(155, 39, 176, 0.103);
                 border:2px solid $purple-color;
+
             }
-            .block-icon-5{
+            .block-icon-5 {
+
                 background:rgba(3, 168, 244, 0.11);
                 border:2px solid $skyblue-color;
+
             }
-            .block-icon-6{
+            .block-icon-6 {
+
                 background:rgba(76, 175, 79, 0.116);
                 border:2px solid $green-color;
+
             }
-            .block-content{
-                h3{
+            .block-content {
+
+                h3 {
+
                     color:$light-color;
                     margin:20px 0px;
                     font-size:25px;
+
                 }
+
             }
         }
     }

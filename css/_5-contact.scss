@@ -9,6 +9,7 @@ label{
         color:$secondary-color;
         text-align:center;
         margin-bottom:3rem;
+        font-size:35px;
     }
     .contact-grid{
         display:grid;
@@ -37,6 +38,22 @@ label{
         font-size:25px;
         text-align:center;
     }
+
+    p {
+
+        text-align: center;
+        margin: 2rem 0;
+
+        @include leptop() {
+
+            display: block;
+            width: 700px;
+            margin: 2rem auto ;
+            
+        }
+
+    }
+
     form{
         display:grid;
         grid-template-columns:1fr;
@@ -76,22 +93,41 @@ label{
                 grid-row:4/5;
             }
         }
-        input,textarea{
+
+        label {
+
+            line-height:40px;
+            margin: 0 1rem;
+
+        }
+
+        input,textarea {
+            
             display:block;
             width:100%;
             padding:1rem .5rem;
             border-radius:30px;
             border:1px solid $secondary-color;
             outline:none;
+            transition: all .5s;
+            font-size:18px;
+
+            &:focus {
+
+                padding: 1.3rem .8rem;
+
+            }
+
         }
-        #contact-btn{
+        #contact-btn {
+            
             color:$light-color;
-            padding:15px 20px;
             background-image:linear-gradient(to right,$primary-color,$secondary-color);
             border-radius: 25px;
             width:150px;
             margin:2rem 0rem;
             border:none;
+
         }
         #contact-btn:hover{
             background-image:linear-gradient(to right, $secondary-color,$primary-color);

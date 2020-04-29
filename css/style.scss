@@ -42,10 +42,17 @@ $h-text:'Sriracha', cursive;
         @content;
     }
 }
+
+@mixin section-padding() {
+
+    padding: 5rem 0;
+    
+}
 @mixin lead(){
     font-size:20px;
     font-family:$p-text;
     color:$p-color;
+    line-height:30px;
 }
 
 
