@@ -1,56 +1,98 @@
 /*footer-start*/
-#footer{
+#footer {
+
     background:$dark-color-2;
     padding:5rem 0px;
-    .footer-grid{
+    
+    .footer-grid {
+
         display:grid;
         grid-template-columns:1fr;
         grid-template-rows: repeat(4,min-content);
         grid-gap:30px;
-        @include tablet(){
+
+        @include tablet() {
             grid-template-columns:1fr 1fr;
             grid-template-rows: repeat(2,min-content);
         }
-        @include leptop(){
+
+        @include leptop() {
             grid-template-columns:1fr 1fr 1fr 1fr;
             grid-template-rows:min-content;
         }
-        h3{
+
+
+
+        h3 {
+
             color:$light-color;
             margin:10px 0px;
+
         }
-        a{
+
+        a {
+
             color:$light-color;
+
         }
-        ul{
+
+        ul {
+
             list-style:none;
+
         }
-        .f-follow,.f-about,.f-links,.f-sub{
+
+
+
+        .f-follow,.f-about,.f-links,.f-sub {
+
             font-size:14px;
+
         }
-        .f-links ul li a{
+
+        .f-links ul li a {
+
             line-height:25px;
             color:$p-color;
             font-size:20px;
+
         }
-        .f-links ul li a:hover{
+
+        .f-links ul li a:hover {
+            
             text-decoration:underline;
             color:$light-color;
+
         }
-        .f-follow i{
+
+
+
+        .f-follow i {
+
             color: $p-color;
             cursor:pointer;
             font-size:20px;
             margin:0px 10px;
+
         }
-        .f-follow i:hover{
+
+        .f-follow i:hover {
+
             color: $light-color;
+
         }
-        .f-sub{
-            .subscribe{
+
+
+
+        .f-sub {
+            
+            .subscribe {
+
                 position: relative;
                 background: red;
-                input{
+
+                input {
+
                     padding:13px;
                     border:1px solid $light-color;
                     outline:none;
@@ -60,8 +102,10 @@
                     float:left;
                     width:100%;
                     color:$light-color;
+
                 }
-                a{
+                a {
+
                     position:absolute;
                     top:0;
                     right:0;
@@ -72,24 +116,38 @@
                     line-height:48px;
                     text-align:center;
                     color:$dark-color-2;
+
                 }
             }
+
         }
     }
-    .f-copyright{
+
+
+
+    .f-copyright {
+        
         margin-top:100px;
         padding-top:35px;
         border-top:1px solid $light-color;
         text-align:center;
-        :first-child{
+
+        :first-child {
+
             color: $p-color;
             font-size: 20px;
             margin:20px 0px;
+
         }
-        :last-child{
+
+        :last-child {
+
             color:$p-color;
-            a{
+
+            a {
+
                 color:$secondary-color;
+
             }
         }
     }

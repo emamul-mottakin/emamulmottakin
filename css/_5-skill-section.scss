@@ -1,0 +1,266 @@
+#skill {
+
+    //progressbar start here!!
+    .skills-progressbar {
+
+        @include section-padding();
+
+        background: $dark-color-2;
+        padding-bottom: 6rem;
+        position: relative;
+        
+        a {
+
+            color: #F44336;
+            text-decoration: none;
+            background: #dadada;
+            border-radius: 10px;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 25px;
+
+
+        }
+
+        .skill-heading {
+        
+            color:$secondary-color;
+            text-align:center;
+            margin-bottom:3rem;
+            font-size:35px;
+    
+        }
+    
+        .skills {
+    
+            .progress-bar {
+    
+                width: 100%;
+                margin: 2rem 0;
+                @include lead();
+                color: $light-color;
+                background: $dark-color;
+                padding: .2rem 1rem 1rem 1rem;
+                border-radius: 10px;
+    
+                span {
+
+                    line-height: 50px;
+
+                }
+
+                span:nth-child(1) {
+                    
+                    color: $secondary-color;
+    
+                }
+
+                span:nth-child(2) {
+                    
+                    float: right;
+    
+                }
+    
+                .bar {
+    
+                    height: 1rem;
+                    background: #f1f1f1;
+                    border-radius: 5rem;
+                    position: relative;
+    
+                }
+    
+                .bar-html::after {
+    
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 82%;
+                    height: 100%;
+                    background-image: linear-gradient(to left, $primary-color, $secondary-color);
+                    border-radius: 5rem;
+    
+                }
+    
+                .bar-css::after {
+    
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 90%;
+                    height: 100%;
+                    background-image: linear-gradient(to right, $primary-color, $secondary-color);
+                    border-radius: 5rem;
+    
+                }
+    
+                .bar-js::after {
+    
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 30%;
+                    height: 100%;
+                    background-image: linear-gradient(to right, $primary-color, $secondary-color);
+                    border-radius: 5rem;
+    
+                }
+    
+                .bar-bs::after {
+    
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 75%;
+                    height: 100%;
+                    background-image: linear-gradient(to right, $primary-color, $secondary-color);
+                    border-radius: 5rem;
+    
+                }
+    
+            }
+    
+        }
+
+    }
+
+    // dev tool start here!!
+
+    #dev-tool {
+
+        padding: 10rem 0;
+        margin-top: -5rem;
+        background-image: linear-gradient(to right, $primary-color, $secondary-color);
+
+        .dev-tool-heading {
+            
+            color:$light-color;
+            text-align:center;
+            margin-bottom:3rem;
+            font-size:35px;
+           
+        }
+
+        .dev-tool-grid {
+
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,min-content);
+            grid-gap:30px;
+
+            @include tablet() {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+            @include leptop() {
+
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+            .dev-box {
+
+                background: $dark-color;
+                text-align: center;
+                padding: 3rem;
+                border-radius: 10px;
+                position: relative;
+                z-index: 1;
+                transition: all 1s;
+
+                &::after {
+
+                    transition: all .5s;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $dark-color-2;
+                    border-radius: 10px;
+                    z-index: -1;
+                    //clip-path: circle(0.5% at 0 0);
+                    clip-path: polygon(50% 0%, 50% 52%, 98% 35%, 50% 52%, 50% 52%, 50% 52%, 21% 91%, 50% 52%, 2% 35%, 50% 52%);
+
+                }
+
+                &:hover::after {
+
+                    //clip-path: circle(141.4% at 0 0);
+                    clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 70%, 100% 100%, 49% 99%, 0 100%, 0 70%, 0 35%, 0 0);
+
+                }
+                &:hover li:nth-child(1) {
+
+                    color: $orange-color;
+
+                }
+
+                &:hover li:nth-child(3) {
+
+                    color: $primary-color;
+
+                }
+
+                &:hover li:nth-child(2) {
+
+                    color: $purple-color;
+
+                }
+
+                &:hover li:nth-child(4) {
+
+                    color: $green-color;
+
+                }
+
+                &:hover li:nth-child(5) {
+
+                    color: $skyblue-color;
+
+                }
+
+                h1 {
+
+                    color: $secondary-color;
+                    margin: .5rem;
+                    padding-bottom: .2rem;;
+                    border-bottom: 2px solid $primary-color;
+                    border-radius: 100%;
+
+                }
+
+                ul {
+
+                    list-style: none;
+
+                    li {
+
+                        @include lead();
+                        color: $light-color;
+                        line-height: 50px;
+
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}
